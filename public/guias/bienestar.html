@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Manual: Bienestar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-base: #fdfaf8;
+      --bg-soft: #dfb6b6;
+      --text-main: #422f22;
+      --accent: #c23552;
+      --accent-soft: #d1b49c;
+    }
+    
+    @page { size: 1280px 720px; margin: 0; }
+    
+    body { font-family: 'Inter', sans-serif; margin: 0; background: #e5e5e5; color: var(--text-main); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    .slide { width: 1280px; height: 720px; box-sizing: border-box; padding: 80px 100px; background: var(--bg-base); margin: 20px auto; position: relative; overflow: hidden; page-break-after: always; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .shape-1 { position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: var(--bg-soft); border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; opacity: 0.6; z-index: 0; }
+    .shape-2 { position: absolute; bottom: -150px; left: -50px; width: 500px; height: 500px; background: var(--accent-soft); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; opacity: 0.15; z-index: 0; }
+
+    .content { position: relative; z-index: 10; display: flex; flex-direction: column; height: 100%; justify-content: center; }
+    .two-cols { display: flex; gap: 60px; align-items: center; height: 100%; }
+    .col { flex: 1; }
+
+    h1 { font-family: 'Caveat', cursive; font-size: 4.5rem; color: #a54b5b; margin: 0 0 20px 0; line-height: 1.1; }
+    h2 { font-family: 'Inter', sans-serif; font-size: 1.5rem; font-weight: 500; color: var(--accent-soft); margin: 0 0 30px 0; letter-spacing: -0.5px; }
+    h3 { font-family: 'Caveat', cursive; font-size: 3.5rem; color: var(--text-main); margin: 0 0 20px 0; }
+
+    p { font-size: 1.3rem; line-height: 1.6; margin-bottom: 25px; color: #5a4539; font-weight: 300; }
+    
+    .highlight-box { background: rgba(223, 182, 182, 0.4); border-left: 6px solid #a54b5b; padding: 30px; border-radius: 0 16px 16px 0; margin: 30px 0; }
+    .highlight-box p { margin: 0; font-weight: 500; color: var(--text-main); }
+    img.hero-img { width: 100%; height: 450px; object-fit: cover; border-radius: 20px; box-shadow: 0 20px 40px rgba(66, 47, 34, 0.1); }
+    ul, ol { font-size: 1.25rem; line-height: 1.8; color: #5a4539; padding-left: 30px; font-weight: 300; }
+    li { margin-bottom: 15px; }
+    li strong { color: var(--text-main); font-weight: 600; }
+
+    .footer { position: absolute; bottom: 40px; right: 100px; font-family: 'Inter', sans-serif; font-size: 1rem; color: var(--accent-soft); font-weight: 500; letter-spacing: 2px; text-transform: uppercase; z-index: 10; }
+    .ref { font-size: 0.9rem; color: #a19289; font-style: italic; margin-top: auto; border-top: 1px solid #efebeb; padding-top: 20px; }
+
+    @media print { body { background: white; -webkit-print-color-adjust: exact; } .slide { margin: 0; box-shadow: none; border-radius: 0; } }
+  </style>
+</head>
+<body>
+
+  <!-- Slide 1 -->
+  <div class="slide">
+    <div class="shape-1"></div>
+    <div class="shape-2"></div>
+    <div class="content two-cols">
+      <div class="col" style="flex: 1.2;">
+        <h2>Más allá de simplemente sobrevivir</h2>
+        <h1>Revitalizando<br>tu Bienestar Diario</h1>
+        <p>En psicología, el bienestar no se define como "no estar enfermo". Un verdadero bienestar psicológico equivale a estados sistemáticos de propósito social y vitalidad al despertar.</p>
+        <div class="highlight-box">
+          <p>Estar en "piloto automático" durante mucho tiempo, saltando de tarea en tarea sin procesamiento emocional, merma progresivamente nuestras reservas.</p>
+        </div>
+        <p class="ref">Basado en mediciones del OMS (WHO-5 Well-being Index).</p>
+      </div>
+      <div class="col">
+        <img src="bienestar_habitos_1774508902054.png" class="hero-img" alt="Bienestar y calma" onerror="this.src='https://images.unsplash.com/photo-1550592704-6c76defa99ce?auto=format&fit=crop&q=80&w=800'; this.onerror=null;">
+      </div>
+    </div>
+    <div class="footer">Espacio Amukan</div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide">
+    <div class="shape-2" style="top: -200px; right: -100px; left: auto; opacity: 0.4; background: var(--bg-soft);"></div>
+    <div class="content">
+      <h3 style="text-align: center;">El Diario de Tres Cosas Buenas ✍️</h3>
+      <p style="text-align: center; max-width: 900px; margin: 0 auto 40px auto;">El bienestar diario se construye 'inyectando' en tu rutina neuroquímicos saludables (dopamina sostenida, oxitocina, serotonina) para combatir el ciclo del desgaste.</p>
+      
+      <div class="two-cols" style="align-items: flex-start;">
+        <div class="col" style="flex: 0.8;">
+          <img src="bienestar_habitos_1774508902054.png" class="hero-img" style="height: 350px;" alt="Diario" onerror="this.src='https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?auto=format&fit=crop&q=80&w=800'; this.onerror=null;">
+        </div>
+        <div class="col">
+          <p>Cada noche, anota en una libreta física:</p>
+          <ul>
+            <li>Algo bueno (por mínimo que sea) que sucedió hoy.</li>
+            <li>Qué rol tuviste o cómo permitiste tú que eso pasara.</li>
+            <li>Algo mundano del día de lo que estás agradecido (ej. un café caliente).</li>
+          </ul>
+          <div class="highlight-box" style="padding: 15px;">
+            <p><strong>¿Por qué?</strong> Tu cerebro filtra la positividad por defecto. La escritura fuerza las sinapsis de recuerdos agradables.</p>
+          </div>
+          <p class="ref">Intervenciones de Psicología Positiva (Seligman et al., 2005).</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">Espacio Amukan</div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="slide">
+    <div class="content two-cols">
+      <div class="col">
+        <h3>Higiene del Ritual Matutino 🌅</h3>
+        <p>Eres una criatura biológica sintonizada con la luz. El Cortisol (hormona de estrés/vigilia) eleva su nivel naturalmente al despertar. Si comienzas consumiendo quejas digitales, se desborda.</p>
+        <div class="highlight-box">
+          <p>Protege tu "Batería Daria de Toma de Decisiones" en la primera hora. Es sagrada.</p>
+        </div>
+      </div>
+      <div class="col" style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.06);">
+        <h2 style="font-family: 'Caveat'; font-size: 2.5rem; color: #a54b5b; margin-bottom: 20px;">Las 3 Leyes de la Primera Hora:</h2>
+        <ul>
+          <li><strong>Luz directa Absoluta:</strong> Mira luz del sol o el cielo (5-10 min) antes de mirar pantallas. Ancla tu ritmo biológico.</li>
+          <li><strong>Demora digital inteligente:</strong> Posterga tu celular 45 min diarios al despertar.</li>
+          <li><strong>Movilidad Inmediata:</strong> 5 minutos de estiramientos articulares avisan fisiológicamente que el entorno es seguro.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer">Espacio Amukan</div>
+  </div>
+
+</body>
+</html>

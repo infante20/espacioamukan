@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Manual: Ansiedad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-base: #fdfaf8;
+      --bg-soft: #f7e1e1;
+      --text-main: #422f22;
+      --accent: #c23552;
+      --accent-soft: #d1b49c;
+    }
+    
+    @page { size: 1280px 720px; margin: 0; }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #e5e5e5;
+      color: var(--text-main);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      box-sizing: border-box;
+      padding: 80px 100px;
+      background: var(--bg-base);
+      margin: 20px auto;
+      position: relative;
+      overflow: hidden;
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* Organic Shapes Background */
+    .shape-1 { position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: var(--bg-soft); border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; opacity: 0.6; z-index: 0; }
+    .shape-2 { position: absolute; bottom: -150px; left: -50px; width: 500px; height: 500px; background: var(--accent-soft); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; opacity: 0.15; z-index: 0; }
+
+    .content { position: relative; z-index: 10; display: flex; flex-direction: column; height: 100%; justify-content: center; }
+    .two-cols { display: flex; gap: 60px; align-items: center; height: 100%; }
+    .col { flex: 1; }
+
+    h1 { font-family: 'Caveat', cursive; font-size: 5rem; color: var(--accent); margin: 0 0 20px 0; line-height: 1.1; }
+    h2 { font-family: 'Inter', sans-serif; font-size: 1.8rem; font-weight: 500; color: var(--accent-soft); margin: 0 0 30px 0; letter-spacing: -0.5px; }
+    
+    h3 { font-family: 'Caveat', cursive; font-size: 3.5rem; color: var(--text-main); margin: 0 0 20px 0; }
+
+    p { font-size: 1.3rem; line-height: 1.6; margin-bottom: 25px; color: #5a4539; font-weight: 300; }
+    
+    .highlight-box {
+      background: rgba(247, 225, 225, 0.4);
+      border-left: 6px solid var(--accent);
+      padding: 30px;
+      border-radius: 0 16px 16px 0;
+      margin: 30px 0;
+    }
+    
+    .highlight-box p { margin: 0; font-weight: 500; color: var(--text-main); }
+
+    img.hero-img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(66, 47, 34, 0.1);
+    }
+    
+    ul, ol { font-size: 1.25rem; line-height: 1.8; color: #5a4539; padding-left: 30px; font-weight: 300; }
+    li { margin-bottom: 15px; }
+    li strong { color: var(--text-main); font-weight: 600; }
+
+    .footer { position: absolute; bottom: 40px; right: 100px; font-family: 'Inter', sans-serif; font-size: 1rem; color: var(--accent-soft); font-weight: 500; letter-spacing: 2px; text-transform: uppercase; z-index: 10; }
+    .ref { font-size: 0.9rem; color: #a19289; font-style: italic; margin-top: auto; border-top: 1px solid #efebeb; padding-top: 20px; }
+
+    /* For PDF Export */
+    @media print {
+      body { background: white; -webkit-print-color-adjust: exact; }
+      .slide { margin: 0; box-shadow: none; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Slide 1 -->
+  <div class="slide">
+    <div class="shape-1"></div>
+    <div class="shape-2"></div>
+    <div class="content two-cols">
+      <div class="col" style="flex: 1.2;">
+        <h2>Guía Rápida de Supervivencia Emocional</h2>
+        <h1>Entendiendo<br>la Ansiedad</h1>
+        <p>A pesar de lo abrumadora que se siente, la ansiedad no es una debilidad personal. Es una respuesta biológica de supervivencia (lucha o huida) que se ha quedado "encendida" en tu sistema nervioso central.</p>
+        <div class="highlight-box">
+          <p>Tu amígdala cerebral detecta amenazas donde no las hay (como un correo del trabajo o expectativas) y activa cascadas de cortisol y adrenalina, acelerando tu corazón.</p>
+        </div>
+        <p class="ref">Basado en mediciones y reestructuración para el trastorno GAD-7 (Spitzer et al., 2006).</p>
+      </div>
+      <div class="col">
+        <img src="ansiedad_respiracion_1774508868426.png" class="hero-img" alt="Calma interior" onerror="this.src='https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&q=80&w=800'; this.onerror=null;">
+      </div>
+    </div>
+    <div class="footer">Espacio Amukan</div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide">
+    <div class="shape-2" style="top: -200px; right: -100px; left: auto; opacity: 0.4; background: var(--bg-soft);"></div>
+    <div class="content">
+      <h3 style="text-align: center;">Respiración en Caja 📦</h3>
+      <p style="text-align: center; max-width: 900px; margin: 0 auto 40px auto;">Cuando la ansiedad sube abruptamente, razonar *no* funciona. El cerebro prefrontal (lógico) se apaga. Debes usar tu cuerpo (tu fisiología) para calmar tu mente.</p>
+      
+      <div class="two-cols" style="align-items: flex-start;">
+        <div class="col" style="flex: 0.8;">
+          <img src="ansiedad_respiracion_1774508868426.png" class="hero-img" style="height: 350px;" alt="Técnica de respiración" onerror="this.src='https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?auto=format&fit=crop&q=80&w=800'; this.onerror=null;">
+        </div>
+        <div class="col">
+          <ol>
+            <li><strong>Inhala</strong> dibujando la primera línea de la caja (4 seg).</li>
+            <li><strong>Retén</strong> el aire suavemente (4 seg).</li>
+            <li><strong>Exhala</strong> lentamente por la boca (4 seg).</li>
+            <li><strong>Retén</strong> tus pulmones sin aire (4 seg).</li>
+          </ol>
+          <div class="highlight-box" style="padding: 20px;">
+            <p>Repite este ciclo 4 veces. Esto estimula el nervio vago y paraliza el ciclo de pánico.</p>
+          </div>
+          <p class="ref">Ref: The Effect of Diaphragmatic Breathing on Negative Affect and Stress (Ma et al., 2017).</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">Espacio Amukan</div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="slide">
+    <div class="shape-1" style="background: var(--accent); opacity: 0.05; width: 800px; height: 800px; bottom: -400px; right: -200px;"></div>
+    <div class="content two-cols">
+      <div class="col">
+        <h3>El Suspiro Fisiológico 🌬️</h3>
+        <p>Si tienes muy poco tiempo y sientes una crisis inminente (ataque de pánico o llanto ahogado), esta es la herramienta de rescate ideal.</p>
+        <p>Es el interruptor de apagado más rápido que tiene la biología humana para la alerta extrema, descubierto por neurobiólogos de alto rendimiento.</p>
+        <div class="highlight-box">
+          <p>La doble inhalación abre los alvéolos colapsados en los pulmones, y la exhalación extra larga le indica mecánicamente a tu corazón que reduzca sus latidos.</p>
+        </div>
+      </div>
+      <div class="col" style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.06);">
+        <h2 style="font-family: 'Caveat'; font-size: 2.5rem; color: var(--accent); margin-bottom: 20px;">Cómo Aplicarlo:</h2>
+        <ol style="padding-left: 20px;">
+          <li>Realiza una inhalación profunda por la nariz.</li>
+          <li>Inmediatamente haz una <strong>segunda inhalación corta</strong> por la nariz hasta llenar al máximo.</li>
+          <li>Exhala muy larga, sonora y lentamente por la boca (como desinflando un globo).</li>
+          <li>Repite el proceso solo de 2 a 3 veces.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="footer">Espacio Amukan</div>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="slide" style="text-align: center; background: var(--bg-soft);">
+    <div class="content" style="align-items: center;">
+      <h1 style="color: var(--text-main); font-size: 4rem;">"No tienes que poder con todo hoy."</h1>
+      <p style="max-width: 800px; margin: 30px auto; font-size: 1.4rem;">Estas herramientas son excelentes "analgésicos" fisiológicos. Sin embargo, para sanar la ansiedad de raíz, es vital abordarla de la mano con un profesional que te ayude a reprogramar tus esquemas mentales.</p>
+      
+      <div style="background: white; padding: 40px 60px; border-radius: 20px; display: inline-block; margin-top: 20px; box-shadow: 0 20px 40px rgba(194,53,82,0.1);">
+        <h2 style="font-family: 'Caveat'; font-size: 3rem; color: var(--accent); margin: 0 0 10px 0;">En Espacio Amukan 🤍</h2>
+        <p style="margin: 0; max-width: 600px; font-size: 1.2rem;">Te acompañamos desde una mirada integral. Validando siempre tu ritmo individual. No hay prisa, pero tampoco debes recorrer esto en soledad.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
