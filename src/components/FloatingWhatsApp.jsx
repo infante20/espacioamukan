@@ -3,7 +3,7 @@ import React from 'react';
 const FloatingWhatsApp = () => {
   return (
     <a 
-      href="https://wa.me/569988186522" 
+      href="https://wa.me/56988186522" 
       target="_blank" 
       rel="noopener noreferrer"
       style={{
