@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Mail, Phone, AtSign } from 'lucide-react';
+import { MapPin, Phone, AtSign } from 'lucide-react';
 
 const Footer = () => (
   <footer className="bg-neutral text-neutral-content">
@@ -25,12 +25,11 @@ const Footer = () => (
         <div>
           <h6 className="text-sm font-semibold uppercase tracking-wider mb-4 text-neutral-content/80">Contacto</h6>
           <ul className="space-y-3 text-sm text-neutral-content/60">
-            <li className="flex items-center gap-2"><MapPin size={16} className="text-accent shrink-0" /> Concepción, Chile</li>
-            <li className="flex items-center gap-2"><Mail size={16} className="text-accent shrink-0" /> contacto@espacioamukan.cl</li>
+            <li className="flex items-start gap-2"><MapPin size={16} className="text-accent shrink-0 mt-0.5" /> <span>Calle Nonguén 265, Sector Lo Pequén, Concepción</span></li>
             <li className="flex items-center gap-2"><Phone size={16} className="text-accent shrink-0" /> +56 9 8818 6522</li>
             <li>
-              <a href="https://www.instagram.com/espacioamukan" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
-                <AtSign size={16} className="text-accent shrink-0" /> @espacioamukan
+              <a href="https://www.instagram.com/amukan.psicoterapia/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
+                <AtSign size={16} className="text-accent shrink-0" /> @amukan.psicoterapia
               </a>
             </li>
           </ul>

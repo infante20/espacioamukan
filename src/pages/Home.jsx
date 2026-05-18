@@ -234,11 +234,8 @@ const Home = () => {
             <p className="text-secondary-content/70">Contenido sobre bienestar emocional, tips y acompañamiento.</p>
           </div>
           <div className="flex gap-4">
-            <a href="https://www.instagram.com/espacioamukan" target="_blank" rel="noopener noreferrer" className="btn btn-lg bg-white/10 border-white/20 text-white hover:bg-white/20 gap-2">
+            <a href="https://www.instagram.com/amukan.psicoterapia/" target="_blank" rel="noopener noreferrer" className="btn btn-lg bg-white/10 border-white/20 text-white hover:bg-white/20 gap-2">
               <AtSign size={20} /> Instagram
-            </a>
-            <a className="btn btn-lg bg-white/10 border-white/20 text-white hover:bg-white/20 gap-2">
-              <Heart size={20} /> Facebook
             </a>
           </div>
         </div>
