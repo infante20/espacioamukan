@@ -6,9 +6,9 @@ import FloatingWhatsApp from '../FloatingWhatsApp';
 
 const Layout = () => {
   return (
-    <div className="page-wrapper">
+    <div data-theme="amukan" className="min-h-screen bg-base-100 font-sans flex flex-col">
       <Navbar />
-      <main className="main-content fade-in">
+      <main className="flex-1">
         <Outlet />
       </main>
       <Footer />
