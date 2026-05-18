@@ -65,9 +65,11 @@ const ToolsPage = () => {
                 <ArrowLeft size={18} /> Volver a herramientas
               </button>
               <div className="card bg-base-100 shadow-md border border-base-300/40 p-6 md:p-10">
-                {activeTest === 'anxiety' && <AnxietyTest onBack={() => setActiveTest(null)} />}
-                {activeTest === 'stress' && <StressTest onBack={() => setActiveTest(null)} />}
-                {activeTest === 'wellbeing' && <WellbeingTest onBack={() => setActiveTest(null)} />}
+                <div className="legacy-tool">
+                  {activeTest === 'anxiety' && <AnxietyTest onBack={() => setActiveTest(null)} />}
+                  {activeTest === 'stress' && <StressTest onBack={() => setActiveTest(null)} />}
+                  {activeTest === 'wellbeing' && <WellbeingTest onBack={() => setActiveTest(null)} />}
+                </div>
               </div>
             </div>
           )}
